@@ -138,7 +138,7 @@ else
  <div style="border-bottom:1px solid black;padding:5px;background:#ECECEC;color:#21759B;font-weight: bold;">
    Submissions per hour
  </div>
- <div class="canvas" id="cardiocontainer2" style="margin-left:10px;">
+ <div class="canvas" id="cardiocontainer2" style="margin-left:10px;position:relative;">
   <canvas id="cardio2"  width="312" height="200" questions='[{"color":"#00f","values":[<?php echo $hourly_messages; ?>]}]'></canvas>
  </div>
  <div style="padding-right:5px;padding-left:5px;color:#888888;">* Total submissions per hour in the selected date range.<br />&nbsp;&nbsp; Hours from 0 to 23.</div>
@@ -275,7 +275,7 @@ $j(document).ready(function(){
 		            {
 		                for (i=0;i<total/interval;i++)
 		                {
-		                    if ((maxpos-i*interval) >= 0) canvasContainer.append('<div class="legend" style="top:'+(parseInt((i*interval+interval/2)*h-5))+'px">'+(maxpos-i*interval)+'</div>');
+		                    if ((maxpos-i*interval) >= 0) canvasContainer.append('<div class="legend" style="position:absolute;left:-10px;top:'+(parseInt((i*interval+interval/2)*h-5))+'px">'+(maxpos-i*interval)+'</div>');
 		                    ctx.beginPath();
                             ctx.moveTo(start,Math.round((i*interval+interval/2)*h) );
                             ctx.lineTo(width,Math.round((i*interval+interval/2)*h) ); 
